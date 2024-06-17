@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "wx7IWmDluFV/T+IQECFRoH+2qegzGqfadVoOvtgEvMGmoNpwZfuMlkx9qh4gF8lU+XqoCCZpZQpGIrXKW+BuBQ==",
+  "dgSpecHash": "fFK96MZArQQFGZXsz+OUdsaElvk+BHeDRcbocprwloVjYCd+ypDJqzELxlLEg6xFI8u3nhAhpwSa3r3T8KeoAA==",
   "success": true,
   "projectFilePath": "C:\\github-projects\\projeto-pergamo\\PergamoDesktop\\PergamoConsole\\PergamoConsole.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Windows\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\Windows\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "C:\\Users\\Windows\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.1.6\\sqlitepclraw.bundle_green.2.1.6.nupkg.sha512",
+    "C:\\Users\\Windows\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
+    "C:\\Users\\Windows\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\Windows\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.1.6\\sqlitepclraw.provider.dynamic_cdecl.2.1.6.nupkg.sha512",
+    "C:\\Users\\Windows\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.6\\sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\Windows\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }
