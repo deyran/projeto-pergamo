@@ -1,23 +1,18 @@
-﻿using SQLite;
+﻿using PergamoConsole.areas.registros.MVVM.Models;
+using PergamoConsole.database;
 
+using(var pergContext = new PergamoContext())
+{
+    List<Pessoas> PessoasLst = pergContext.Pessoas.ToList();
 
- string connectionString = "Data Source=dbPergamo.db;Version=3;";
-            using (var connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
+    System.Console.WriteLine("*************************************");
 
-                string sql = "SELECT * FROM Pessoas";
-                using (var command = new SQLiteCommand(sql, connection))
-                {
-                    using (SQLiteDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            // Assuming 'Pessoas' table has 'Name' and 'Age' columns
-                            Console.WriteLine("Name: " + reader["Name"] + "\tAge: " + reader["Age"]);
-                        }
-                    }
-                }
+    foreach(var pessoa in PessoasLst)
+    {
+        System.Console.WriteLine("id....: " + pessoa.Id);
+        System.Console.WriteLine("Nome..: " + pessoa.Nome);
+        System.Console.WriteLine("-------------------------");
+    } 
 
-                connection.Close();
-            }
+    System.Console.WriteLine("*************************************");
+}

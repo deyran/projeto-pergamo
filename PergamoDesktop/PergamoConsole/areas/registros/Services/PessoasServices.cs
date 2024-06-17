@@ -10,7 +10,7 @@ namespace PergamoConsole.areas.registros.Services
 
         public async Task InitializeAsync()
         {
-            _dbConnection =  new SQLiteAsyncConnection(DbConstantes.strConnection);
+           // _dbConnection =  new SQLiteAsyncConnection(DbConstantes.strConnection);
         }
 
         public async Task<List<Pessoas>> GetPessoas()
