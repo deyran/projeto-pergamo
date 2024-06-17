@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using SQLite;
+using PergamoConsole.database;
+
+Console.WriteLine("------------------------------");
+Console.WriteLine("--> " + DbConstantes.DatabaseFilename);
+Console.WriteLine("--> " + DbConstantes.DatabasePath);
+Console.WriteLine("--> " + DbConstantes.Flags);
+Console.WriteLine("------------------------------");
+
+SQLiteConnection db = new SQLiteConnection(DbConstantes.DatabaseFilename);
