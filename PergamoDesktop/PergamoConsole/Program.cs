@@ -1,20 +1,23 @@
-﻿using PergamoConsole.areas.registros.MVVM.Models;
-using PergamoConsole.areas.registros.Services;
+﻿using SQLite;
 
-public class Program
-{
-    static void Main(string[] args)
-    {
-        ObterEImprimirPessoas().GetAwaiter().GetResult();
-    }
 
-    private static async Task ObterEImprimirPessoas()
-    {
-        var pessoaLst = await new PessoasServices().GetPessoas();
+ string connectionString = "Data Source=dbPergamo.db;Version=3;";
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
 
-        foreach (var pessoa in pessoaLst)
-        {
-            Console.WriteLine($"Id: {pessoa.Id}, Nome: {pessoa.Nome}");
-        }
-    }
-}
+                string sql = "SELECT * FROM Pessoas";
+                using (var command = new SQLiteCommand(sql, connection))
+                {
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Assuming 'Pessoas' table has 'Name' and 'Age' columns
+                            Console.WriteLine("Name: " + reader["Name"] + "\tAge: " + reader["Age"]);
+                        }
+                    }
+                }
+
+                connection.Close();
+            }
