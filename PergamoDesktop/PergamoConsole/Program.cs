@@ -1,10 +1,20 @@
-﻿using SQLite;
-using PergamoConsole.database;
+﻿using PergamoConsole.areas.registros.MVVM.Models;
+using PergamoConsole.areas.registros.Services;
 
-Console.WriteLine("------------------------------");
-Console.WriteLine("--> " + DbConstantes.DatabaseFilename);
-Console.WriteLine("--> " + DbConstantes.DatabasePath);
-Console.WriteLine("--> " + DbConstantes.Flags);
-Console.WriteLine("------------------------------");
+public class Program
+{
+    static void Main(string[] args)
+    {
+        ObterEImprimirPessoas().GetAwaiter().GetResult();
+    }
 
-SQLiteConnection db = new SQLiteConnection(DbConstantes.DatabaseFilename);
+    private static async Task ObterEImprimirPessoas()
+    {
+        var pessoaLst = await new PessoasServices().GetPessoas();
+
+        foreach (var pessoa in pessoaLst)
+        {
+            Console.WriteLine($"Id: {pessoa.Id}, Nome: {pessoa.Nome}");
+        }
+    }
+}
