@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Penk21WIVQAhVQjkzLZSSrLS1oX0OaCq/q37EmEl4dcPE7UiTCITpiEAYhEZus0Hxo1kUuKm+Tuekif9i6LBVQ==",
+  "dgSpecHash": "XEmsJ6cqFZA8f1v48sHirKNRsmS91Ff1WrBVkbAzY/gkFOe+PQO8o23zetwZqlp8h2R/qVAJI+inNBqw1ywtMQ==",
   "success": true,
   "projectFilePath": "C:\\github-projects\\projeto-pergamo\\PergamoDesktop\\PergamoConsole\\PergamoConsole.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Windows\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
+    "C:\\Users\\Windows\\.nuget\\packages\\microsoft.data.sqlite\\8.0.6\\microsoft.data.sqlite.8.0.6.nupkg.sha512",
     "C:\\Users\\Windows\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.6\\microsoft.data.sqlite.core.8.0.6.nupkg.sha512",
     "C:\\Users\\Windows\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.6\\microsoft.entityframeworkcore.8.0.6.nupkg.sha512",
     "C:\\Users\\Windows\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.6\\microsoft.entityframeworkcore.abstractions.8.0.6.nupkg.sha512",

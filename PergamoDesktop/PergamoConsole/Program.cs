@@ -1,18 +1,25 @@
-﻿using PergamoConsole.areas.registros.MVVM.Models;
-using PergamoConsole.database;
+﻿using Microsoft.Data.Sqlite;
 
-using(var pergContext = new PergamoContext())
+using (var connection = new SqliteConnection("Data Source=dbPergamo.db"))
 {
-    List<Pessoas> PessoasLst = pergContext.Pessoas.ToList();
+    connection.Open();
 
-    System.Console.WriteLine("*************************************");
+    var command = connection.CreateCommand();
+    command.CommandText =
+    "SELECT P.Id, P.Nome FROM REG_PESSOAS AS P";
 
-    foreach(var pessoa in PessoasLst)
+    using (var reader = command.ExecuteReader())
     {
-        System.Console.WriteLine("id....: " + pessoa.Id);
-        System.Console.WriteLine("Nome..: " + pessoa.Nome);
-        System.Console.WriteLine("-------------------------");
-    } 
+        while (reader.Read())
+        {
+            var Id = reader.GetString(0);
+            var Nome = reader.GetString(1);
 
-    System.Console.WriteLine("*************************************");
+            Console.WriteLine("Id....: " + Id);
+            Console.WriteLine("Nome..: " + Nome);
+            Console.WriteLine("--------------------------");
+        }
+    }
 }
+
+//FONTE: https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=net-cli

@@ -9,6 +9,7 @@
       "PergamoConsole/1.0.0": {
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
+          "Microsoft.Data.Sqlite": "8.0.6",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.6",
           "SQLitePCLRaw.bundle_green": "2.1.8",
           "SQLitePCLRaw.core": "2.1.8",
@@ -25,6 +26,12 @@
             "assemblyVersion": "8.2.0.0",
             "fileVersion": "8.2.2.1"
           }
+        }
+      },
+      "Microsoft.Data.Sqlite/8.0.6": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "8.0.6",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.6"
         }
       },
       "Microsoft.Data.Sqlite.Core/8.0.6": {
@@ -396,6 +403,13 @@
       "sha512": "sha512-r0g0k9tGYdrnz8R7T3x5UiokDffeevzK/2P/9SBL6fqLgN8B157MIi/bVUWI1KAz6ZorZrK9AdABCWUeXZZsvA==",
       "path": "communitytoolkit.mvvm/8.2.2",
       "hashPath": "communitytoolkit.mvvm.8.2.2.nupkg.sha512"
+    },
+    "Microsoft.Data.Sqlite/8.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YVzVtU1IoGsTiMAe0BNV9ssKyrUm6lBQJP6w2N4W29YrBYYtyCmTFmrNGjxaJtJXVqttu0sYkPxmStj/OnMFdg==",
+      "path": "microsoft.data.sqlite/8.0.6",
+      "hashPath": "microsoft.data.sqlite.8.0.6.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/8.0.6": {
       "type": "package",
