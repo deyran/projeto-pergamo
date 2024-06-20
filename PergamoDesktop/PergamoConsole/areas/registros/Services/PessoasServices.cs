@@ -6,19 +6,33 @@ namespace PergamoConsole.areas.registros.Services
 {
     public class PessoasServices : IPessoasServices
     {
-        private SQLiteAsyncConnection _dbConnection;
+        private SQLiteAsyncConnection? _dbConnection;
 
         public async Task InitializeAsync()
         {
-           // _dbConnection =  new SQLiteAsyncConnection(DbConstantes.strConnection);
+            await SetUpDb();
+        }
+
+        private async Task SetUpDb()
+        {
+            if (_dbConnection == null)
+            {
+                string dbPath = Path.Combine(
+                    Environment.GetFolderPath(
+                        Environment.SpecialFolder.LocalApplicationData),
+                        "dbPergamo.db3"
+                );
+
+                _dbConnection = new SQLiteAsyncConnection(dbPath);
+                
+                await _dbConnection.CreateTableAsync<Pessoas>();
+            }
         }
 
         public async Task<List<Pessoas>> GetPessoas()
         {
             return await _dbConnection.Table<Pessoas>().ToListAsync();
         }
-
-
 
         public Task<int> AddPessoas(Pessoas pessoas)
         {
