@@ -1,7 +1,6 @@
-using PergamoConsole.areas.registros.MVVM.Models;
-using PergamoConsole.database;
-
 using SQLite;
+using PergamoConsole.areas.registros.MVVM.Models;
+
 namespace PergamoConsole.areas.registros.Services
 {
     public class PessoasServices : IPessoasServices
