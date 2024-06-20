@@ -31,7 +31,7 @@ namespace PergamoConsole.areas.registros.Services
 
         public async Task<List<Pessoas>> GetPessoas()
         {
-            return await _dbConnection.Table<Pessoas>().ToListAsync();
+            throw new NotImplementedException();
         }
 
         public Task<int> AddPessoas(Pessoas pessoas)

@@ -57,4 +57,3 @@ C:\github-projects\projeto-pergamo\PergamoDesktop\PergamoConsole\bin\Debug\net8.
 C:\github-projects\projeto-pergamo\PergamoDesktop\PergamoConsole\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\github-projects\projeto-pergamo\PergamoDesktop\PergamoConsole\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\github-projects\projeto-pergamo\PergamoDesktop\PergamoConsole\bin\Debug\net8.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so
-C:\github-projects\projeto-pergamo\PergamoDesktop\PergamoConsole\bin\Debug\net8.0\dbPergamo.db

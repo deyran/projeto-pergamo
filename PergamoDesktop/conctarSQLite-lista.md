@@ -1,4 +1,7 @@
-﻿using PergamoConsole.areas.registros.MVVM.Models;
+# Conexão com SQLite e uma lista
+
+```
+using PergamoConsole.areas.registros.MVVM.Models;
 using SQLite;
 
 string filename = "database//dbPergamo.db";
@@ -15,3 +18,4 @@ foreach(var pessoa in PessoasLst)
 }
 
 // Fonte: https://learn.microsoft.com/pt-pt/training/modules/store-local-data/3-store-data-locally-with-sqlite
+```
