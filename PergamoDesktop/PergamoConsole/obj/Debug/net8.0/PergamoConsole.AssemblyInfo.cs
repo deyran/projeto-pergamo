@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PergamoConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64b98ff63df3450766155123bc5c0a94f519607d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9be1bdf77724905c776129b24aae81b4bbc52d45")]
 [assembly: System.Reflection.AssemblyProductAttribute("PergamoConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PergamoConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

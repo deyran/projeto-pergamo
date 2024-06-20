@@ -7,7 +7,7 @@ namespace PergamoConsole.database
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite(
-                $"Data Source=C:\\github-projects\\projeto-pergamo\\PergamoDesktop\\PergamoConsole\\dbPergamo.db");
+                $"Data Source=C:\\github-projects\\projeto-pergamo\\PergamoDesktop\\PergamoConsole\\database\\dbPergamo.db3");
 
         public DbSet<Pessoas> Pessoas { get; set; }
     }
