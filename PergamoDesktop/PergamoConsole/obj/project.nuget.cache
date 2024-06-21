@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XEmsJ6cqFZA8f1v48sHirKNRsmS91Ff1WrBVkbAzY/gkFOe+PQO8o23zetwZqlp8h2R/qVAJI+inNBqw1ywtMQ==",
+  "dgSpecHash": "ATHVa+c3blE=",
   "success": true,
   "projectFilePath": "C:\\github-projects\\projeto-pergamo\\PergamoDesktop\\PergamoConsole\\PergamoConsole.csproj",
   "expectedPackageFiles": [
@@ -34,5 +34,12 @@
     "C:\\Users\\Windows\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\Windows\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }
