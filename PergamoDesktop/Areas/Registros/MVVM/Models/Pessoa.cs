@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace PergamoDesktop.Areas.Registros.MVVM.Views
+namespace PergamoDesktop.Areas.Registros.MVVM.Models
 {
     [Table("REG_PESSOAS")]
     public class Pessoa
