@@ -24,31 +24,31 @@ namespace PergamoConsole.areas.registros.Services
 
                 _dbConnection = new SQLiteAsyncConnection(dbPath);
                 
-                await _dbConnection.CreateTableAsync<Pessoas>();
+                await _dbConnection.CreateTableAsync<Pessoa>();
             }
         }
 
-        public async Task<List<Pessoas>> GetPessoas()
+        public async Task<List<Pessoa>> GetPessoas()
         {
             throw new NotImplementedException();
         }
 
-        public Task<int> AddPessoas(Pessoas pessoas)
+        public Task<int> AddPessoas(Pessoa pessoas)
         {
             throw new NotImplementedException();
         }
 
-        public Task<int> DeletePessoas(Pessoas pessoas)
+        public Task<int> DeletePessoas(Pessoa pessoas)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Pessoas> GetPessoa(int IdPessoa)
+        public Task<Pessoa> GetPessoa(int IdPessoa)
         {
             throw new NotImplementedException();
         }
 
-        public Task<int> UpdatePessoas(Pessoas pessoas)
+        public Task<int> UpdatePessoas(Pessoa pessoas)
         {
             throw new NotImplementedException();
         }

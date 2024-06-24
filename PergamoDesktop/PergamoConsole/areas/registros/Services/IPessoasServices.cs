@@ -5,10 +5,10 @@ namespace PergamoConsole.areas.registros.Services
     public interface IPessoasServices
     {
         Task InitializeAsync();
-        Task<List<Pessoas>> GetPessoas();
-        Task<Pessoas> GetPessoa(int IdPessoa);
-        Task<int> AddPessoas(Pessoas pessoas);
-        Task<int> UpdatePessoas(Pessoas pessoas);
-        Task<int> DeletePessoas(Pessoas pessoas);        
+        Task<List<Pessoa>> GetPessoas();
+        Task<Pessoa> GetPessoa(int IdPessoa);
+        Task<int> AddPessoas(Pessoa pessoas);
+        Task<int> UpdatePessoas(Pessoa pessoas);
+        Task<int> DeletePessoas(Pessoa pessoas);        
     }
 }

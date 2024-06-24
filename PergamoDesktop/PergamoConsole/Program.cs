@@ -3,11 +3,11 @@ using SQLite;
 
 string filename = "database//dbPergamo.db";
 SQLiteConnection conn = new SQLiteConnection(filename);
-conn.CreateTable<Pessoas>();
+conn.CreateTable<Pessoa>();
 
-List<Pessoas> PessoasLst = conn.Table<Pessoas>().ToList();
+List<Pessoa> Pessoas = conn.Table<Pessoa>().ToList();
 
-foreach(var pessoa in PessoasLst)
+foreach(var pessoa in Pessoas)
 {
     System.Console.WriteLine("Id....: " + pessoa.Id);
     System.Console.WriteLine("Nome..: " + pessoa.Nome);

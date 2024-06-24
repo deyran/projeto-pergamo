@@ -3,7 +3,7 @@ using SQLite;
 namespace PergamoConsole.areas.registros.MVVM.Models
 {
     [Table("REG_PESSOAS")]
-    public class Pessoas
+    public class Pessoa
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

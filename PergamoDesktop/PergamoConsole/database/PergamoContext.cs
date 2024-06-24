@@ -9,6 +9,6 @@ namespace PergamoConsole.database
             => options.UseSqlite(
                 $"Data Source=C:\\github-projects\\projeto-pergamo\\PergamoDesktop\\PergamoConsole\\database\\dbPergamo.db3");
 
-        public DbSet<Pessoas> Pessoas { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; }
     }
 }
