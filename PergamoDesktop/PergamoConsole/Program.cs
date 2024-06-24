@@ -1,7 +1,7 @@
 ﻿using PergamoConsole.areas.registros.MVVM.Models;
 using SQLite;
 
-string filename = "database//dbPergamo.db";
+string filename = $"database//dbPergamo.db";
 SQLiteConnection conn = new SQLiteConnection(filename);
 conn.CreateTable<Pessoa>();
 

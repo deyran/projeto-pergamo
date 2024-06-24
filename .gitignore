@@ -1,0 +1,40 @@
+# Ignore arquivos temporários do Visual Studio, resultados de compilação e arquivos gerados por extensões populares do Visual Studio.
+.nuspec
+.buildtasks
+templatesTest
+
+# Arquivos específicos do usuário
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Arquivos gerados automaticamente pelo MonoDevelop/Xamarin Studio
+*.userprefs
+
+# Resultados de compilação
+Debug/
+Release/
+x64/
+x86/
+[Wi]n32/
+[Ar]m/
+[Ar]m64/
+bld/
+Bin/
+Obj/
+Log/
+Logs/
+
+# Cache e opções do Visual Studio 2015/2017
+.vs/
+
+# Arquivos gerados automaticamente pelo Visual Studio 2017
+Generated Files/
+
+# Resultados de teste MSTest
+TestResults/
+
+# Arquivos gerados por ferramentas de cobertura de código como DotCover
+*.dotCover
