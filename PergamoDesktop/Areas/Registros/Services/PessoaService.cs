@@ -6,7 +6,7 @@ namespace PergamoDesktop.Areas.Registros.Services
     public class PessoaService : IPessoaService
     {
         private SQLiteAsyncConnection? _dbConnection;
-
+                
         public async Task InitializeAsync()
         {
             await SetUpDb();
@@ -15,12 +15,10 @@ namespace PergamoDesktop.Areas.Registros.Services
         private async Task SetUpDb()
         {
             if (_dbConnection == null)
-            {
-                string dbPath = Path.Combine("..", "..", "Database", "dbPergamo.db");
-
-                Console.WriteLine("\n---------\n" + dbPath + "\n---------\n");
-
-                _dbConnection = new SQLiteAsyncConnection(dbPath);
+            {              
+                //var dbPath = Path.Combine();
+                                 
+                _dbConnection = new SQLiteAsyncConnection(Path.Combine(@"C:\git-projects\projeto-pergamo\dbPergamo.db3"));
                 await _dbConnection.CreateTableAsync<Pessoa>();
             }
         }
@@ -43,7 +41,7 @@ namespace PergamoDesktop.Areas.Registros.Services
 
         public async Task<List<Pessoa>> GetPessoas()
         {
-            return await _dbConnection.Table<Pessoa>().ToListAsync();
+            return await _dbConnection.Table<Pessoa>().Take(20).ToListAsync();
         }
 
         public async Task<int> UpdatePessoa(Pessoa pessoa)

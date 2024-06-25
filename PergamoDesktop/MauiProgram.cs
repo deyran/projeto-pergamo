@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using PergamoDesktop.Areas.Registros.Services;
 
 namespace PergamoDesktop
 {
@@ -18,6 +19,7 @@ namespace PergamoDesktop
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<IPessoaService, PessoaService>();            
 
             return builder.Build();
         }

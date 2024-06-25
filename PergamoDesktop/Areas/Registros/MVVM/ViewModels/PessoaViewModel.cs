@@ -20,7 +20,7 @@ namespace PergamoDesktop.Areas.Registros.MVVM.ViewModels
 
         public PessoaViewModel(IPessoaService pessoaRepository)
         {
-            _pessoaAtual = new Pessoa();
+            PessoaAtual = new Pessoa();
 
             AddCommand = new Command(
                 async() =>
@@ -66,7 +66,7 @@ namespace PergamoDesktop.Areas.Registros.MVVM.ViewModels
 
         private async Task Refresh(IPessoaService pessoaRepository)
         {
-            _pessoas = await pessoaRepository.GetPessoas();
+            Pessoas = await pessoaRepository.GetPessoas();
         }
     }
 }
