@@ -9,6 +9,6 @@ namespace PergamoDesktop.Areas.Registros.MVVM.Models
         public int Id { get; set; }
 
         [MaxLength(100), NotNull]
-        public string? Name { get; set; }
+        public string? Nome { get; set; }
     }
 }

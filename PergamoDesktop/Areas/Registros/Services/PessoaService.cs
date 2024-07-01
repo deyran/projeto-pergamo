@@ -16,10 +16,10 @@ namespace PergamoDesktop.Areas.Registros.Services
         {
             if (_dbConnection == null)
             {              
-                //var dbPath = Path.Combine();
+                var dbPath = Path.Combine(".\\Database\\dbPergamo.db3");
                                  
-                _dbConnection = new SQLiteAsyncConnection(Path.Combine(@"C:\git-projects\projeto-pergamo\dbPergamo.db3"));
-                await _dbConnection.CreateTableAsync<Pessoa>();
+                _dbConnection = new SQLiteAsyncConnection(dbPath);
+               // await _dbConnection.CreateTableAsync<Pessoa>();
             }
         }
 
