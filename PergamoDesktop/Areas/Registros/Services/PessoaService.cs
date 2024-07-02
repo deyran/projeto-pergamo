@@ -15,11 +15,13 @@ namespace PergamoDesktop.Areas.Registros.Services
         private async Task SetUpDb()
         {
             if (_dbConnection == null)
-            {              
-                var dbPath = Path.Combine(".\\Database\\dbPergamo.db3");
-                                 
-                _dbConnection = new SQLiteAsyncConnection(dbPath);
-               // await _dbConnection.CreateTableAsync<Pessoa>();
+            {  
+                var folder = Environment.SpecialFolder.LocalApplicationData;
+                var path = Environment.GetFolderPath(folder);
+                var DbPath = System.IO.Path.Join(path, "dbPergamo.db");
+
+                _dbConnection = new SQLiteAsyncConnection(DbPath);
+                await _dbConnection.CreateTableAsync<Pessoa>();
             }
         }
 
