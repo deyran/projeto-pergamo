@@ -57,14 +57,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Database\xxxdbPergamo.db" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Include="Database\xxxdbPergamo.db" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
@@ -76,6 +68,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Areas\Principal.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Areas\Registros\MVVM\Views\PessoaView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

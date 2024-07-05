@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PergamoDesktop.Areas.Principal">
+
+    <VerticalStackLayout>
+
+        <Border x:Name="BdrGeral" 
+                StrokeShape="RoundRectangle 10" 
+                Margin="10, 0, 10, 5"
+                BackgroundColor="LightGray"
+                IsVisible="False">
+
+            <Border x:Name="BdrGeralContent"></Border>
+        </Border>
+
+        <Border x:Name="BdrReg" 
+                StrokeShape="RoundRectangle 10" 
+                Margin="10, 0, 10, 5"
+                BackgroundColor="LightGray">
+
+            <Button Text="Registros" 
+                    TextColor="Black" 
+                    BackgroundColor="Transparent"
+                    Clicked="Button_Clicked"/>
+        </Border>
+
+        <Border x:Name="BdrPed" 
+                StrokeShape="RoundRectangle 10" 
+                Margin="10, 0, 10, 5"                 
+                BackgroundColor="LightGray">
+
+            <Button Text="Pedagógico" 
+                    TextColor="Black" 
+                    BackgroundColor="Transparent" />
+
+        </Border>
+
+    </VerticalStackLayout>
+
+</ContentPage>
