@@ -6,16 +6,17 @@
    
 - Informações sobre cada escola que pertence a rede
 - Tempo de deslocamento entre unidades
-- Cadastro das disciplinas
+  
+2. Cadastro das disciplinas
 
-  1. Nome
-  2. Abreviatura
-  3. Espaço físico
-  4. Cor
+- Nome
+- Abreviatura
+- Espaço físico
+- Cor
 
-- AAA
+3. Cadastro de tempo de duração para cada disciplina
 
-1. AA
+
 
 ## [Urânia](https://horario.com.br/)
 
