@@ -42,5 +42,3 @@ Fonte: [V1](https://www.youtube.com/watch?v=wCWiExXOW2o)
 6. Cadastro da grade currícular das turmas
 7. Cadastro de grade-turma e professor
 8. Uma disciplina com n turmas
-
-## [Horário Fácil](https://www.horariofacil.com/pt-BR)
