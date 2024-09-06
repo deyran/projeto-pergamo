@@ -24,4 +24,23 @@ Fonte: [V1](https://www.youtube.com/watch?v=wCWiExXOW2o)
 
 ## [Urânia](https://horario.com.br/)
 
+1. Cadastro das Sedes
+2. Cadastro de Disciplinas
+
+- Nome
+- Abreviatura
+- Cor
+- Código
+
+3. Cadastro de horários
+   
+- Várias turmas podem usar o mesmo padrão
+- No meu caso, um modelo ser copiado e modificado posteriormente
+
+4. Cadastro de turmas
+5. Cadastro de professores e disponibilidade
+6. Cadastro da grade currícular das turmas
+7. Cadastro de grade-turma e professor
+8. Uma disciplina com n turmas
+
 ## [Horário Fácil](https://www.horariofacil.com/pt-BR)
