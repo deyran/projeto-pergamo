@@ -1,6 +1,33 @@
-# Estrutura de banco de dados
+# ESTRUTURA DO BANDO DE DADOS
 
-## Registros externos
+## REGISTRO EXTERNOS
+
+* Registros externos Representam todos os dodos obtidos fora da realidade da escola
+
+* EXT_PESSOAS - Todas as pessoas, física ou jurídica, que estão vinculadas com a escola
+
+```
+CREATE TABLE "EXT_PESSOAS" (
+	"Id"	INTEGER NOT NULL,
+	"Nome"	TEXT NOT NULL,
+	PRIMARY KEY("Id" AUTOINCREMENT)
+)
+```
+
+* EXT_PESS_VINC - Mapeamento que resgistro como as pessoas estão vinculadas
+
+```
+CREATE TABLE "EXT_PESS_VINC" (
+	"IdPess1"	INTEGER,
+	"IdPess2"	INTEGER,
+	"Tipo"	INTEGER,
+	FOREIGN KEY("IdPess1") REFERENCES "EXT_PESSOAS"("Id"),
+	FOREIGN KEY("IdPess2") REFERENCES "EXT_PESSOAS"("Id"),
+	PRIMARY KEY("IdPessoa","IdAluno")
+)
+```
+
+## ADMINISTRATIVO
 
 ## Pedagógico
 
@@ -44,7 +71,7 @@ CREATE TABLE "PED_TURMA_ALUNOS" (
 	"IdTurma"	INTEGER NOT NULL,
 	"IdAluno"	INTEGER NOT NULL,
 	PRIMARY KEY("Id" AUTOINCREMENT),
-	FOREIGN KEY("IdAluno") REFERENCES "REG_PESSOAS"("Id"),
+	FOREIGN KEY("IdAluno") REFERENCES "EXT_PESSOAS"("Id"),
 	FOREIGN KEY("IdTurma") REFERENCES "PED_TURMAS"("Id")
 )
 ```
