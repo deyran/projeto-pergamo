@@ -1,6 +1,10 @@
 # Estrutura de banco de dados
 
-## Classe e Turmas
+## Registros externos
+
+## Pedagógico
+
+### Classe e Turmas
 
 * Uma classe tem várias turmas
 
@@ -28,7 +32,7 @@ CREATE TABLE "PED_TURMAS" (
 )
 ```
 
-## Turma e Alunos
+### Turma e Alunos
 
 * Uma turma tem vários alunos
 
