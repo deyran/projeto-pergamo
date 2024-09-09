@@ -29,7 +29,7 @@ CREATE TABLE "EXT_PESS_VINC" (
 
 ## ADMINISTRATIVO
 
-* Registro de pessoas que estão vinculadas a escola
+* Registro de pessoas que estão vinculadas a escola e os processos administrativos
 
 * ADM_EMPREGADOS - Pessoas da tabela EXT_PESSOAS que são empregados da escola
 
@@ -95,8 +95,41 @@ CREATE TABLE "PED_TURMA_ALUNOS" (
 	"Id"	INTEGER NOT NULL,
 	"IdTurma"	INTEGER NOT NULL,
 	"IdAluno"	INTEGER NOT NULL,
-	PRIMARY KEY("Id" AUTOINCREMENT),
+	
+    PRIMARY KEY("Id" AUTOINCREMENT),
 	FOREIGN KEY("IdAluno") REFERENCES "EXT_PESSOAS"("Id"),
 	FOREIGN KEY("IdTurma") REFERENCES "PED_TURMAS"("Id")
 )
 ```
+
+### Classe e Disciplinas
+
+* Uma classe tem várias disciplinas
+
+* PED_DISCIPLINAS
+
+```
+CREATE TABLE "PED_DISCIPLINAS" (
+	"Id"	INTEGER NOT NULL,
+	"Descricao"	TEXT NOT NULL,
+	"DescAbrevado"	TEXT NOT NULL,
+    PRIMARY KEY("Id" AUTOINCREMENT),
+)
+```
+
+* PED_CLASS_DISC
+
+```
+CREATE TABLE "PED_CLASS_DISC" (
+    "Id"	        INTEGER NOT NULL,
+	"IdClasse"	    INTEGER NOT NULL,
+	"IdDisciplina"	INTEGER NOT NULL,    
+
+	PRIMARY KEY("Id" AUTOINCREMENT)
+	FOREIGN KEY("IdClasse")     REFERENCES "PED_CLASSES"("Id"),
+	FOREIGN KEY("IdDisciplina") REFERENCES "PED_DISCIPLINAS"("Id")
+)
+```
+
+
+## GRADE DE AULAS
