@@ -56,11 +56,7 @@ CREATE TABLE "ADM_FUNCAO" (
 
 ## PEDAGÓGICO
 
-### Classe e Turmas
-
-1. Uma classe tem várias turmas
-
-2. Classe
+### Classe
 
 ```
 CREATE TABLE "PED_CLASSES" (
@@ -79,7 +75,9 @@ Anos iniciais
 Anos finais
 Ensino médio
 
-1. Turmas
+### Turma
+
+*Uma classe tem várias turmas*
 
 ```
 CREATE TABLE "PED_TURMAS" (
@@ -88,35 +86,30 @@ CREATE TABLE "PED_TURMAS" (
 	"Turno"		INTEGER NOT NULL,
 	"Ano"		INTEGER NOT NULL,
 	"Descricao"	TEXT NOT NULL,
-	
+
 	PRIMARY KEY("Id" AUTOINCREMENT),
 	FOREIGN KEY("IdClasse") REFERENCES "PED_CLASSES"("Id")
 )
 ```
 
-### Turma e Alunos
+### Alunos
 
-* Uma turma tem vários alunos
-
-* PED_TURMA_ALUNOS
+*Uma turma tem vários alunos*
 
 ```
 CREATE TABLE "PED_TURMA_ALUNOS" (
-	"Id"	INTEGER NOT NULL,
+	"Id"		INTEGER NOT NULL,
 	"IdTurma"	INTEGER NOT NULL,
 	"IdAluno"	INTEGER NOT NULL,
 	
     PRIMARY KEY("Id" AUTOINCREMENT),
+	
 	FOREIGN KEY("IdAluno") REFERENCES "EXT_PESSOAS"("Id"),
 	FOREIGN KEY("IdTurma") REFERENCES "PED_TURMAS"("Id")
 )
 ```
 
-### Classe | Disciplinas | Professores
-
-* Uma classe tem várias disciplinas
-
-* Disciplinas
+### Disciplinas
 
 ```
 CREATE TABLE "PED_DISCIPLINAS" (
@@ -128,6 +121,16 @@ CREATE TABLE "PED_DISCIPLINAS" (
     PRIMARY KEY("Id" AUTOINCREMENT),
 )
 ```
+
+
+
+### Classe | Disciplinas | Professores
+
+* Uma classe tem várias disciplinas
+
+* Disciplinas
+
+
 
 * Classe & Disciplina - Uma classe tem várias disciplinas
 
