@@ -68,7 +68,7 @@ CREATE TABLE "PED_CLASSES" (
 )
 ```
 
-**Etapas**
+#### Etapas
 
 - Ensino infantil
 - Anos iniciais
