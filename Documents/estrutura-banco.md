@@ -92,23 +92,6 @@ CREATE TABLE "PED_TURMAS" (
 )
 ```
 
-### Alunos
-
-*Uma turma tem vários alunos*
-
-```
-CREATE TABLE "PED_TURMA_ALUNOS" (
-	"Id"		INTEGER NOT NULL,
-	"IdTurma"	INTEGER NOT NULL,
-	"IdAluno"	INTEGER NOT NULL,
-	
-    PRIMARY KEY("Id" AUTOINCREMENT),
-	
-	FOREIGN KEY("IdAluno") REFERENCES "EXT_PESSOAS"("Id"),
-	FOREIGN KEY("IdTurma") REFERENCES "PED_TURMAS"("Id")
-)
-```
-
 ### Disciplinas
 
 ```
@@ -122,30 +105,46 @@ CREATE TABLE "PED_DISCIPLINAS" (
 )
 ```
 
+### Relacionamento entre Classe & Disciplinas
 
-
-### Classe | Disciplinas | Professores
-
-* Uma classe tem várias disciplinas
-
-* Disciplinas
-
-
-
-* Classe & Disciplina - Uma classe tem várias disciplinas
+*Uma classe tem está para várias disciplinas*
+*Assim como uma disciplina está para várias classes*
 
 ```
 CREATE TABLE "PED_CLASS_DISC" (
-    "Id"	        INTEGER NOT NULL,
-	"IdClasse"	    INTEGER NOT NULL,
-	"IdDisciplina"	INTEGER NOT NULL,    
+    "IdClasse"      INTEGER NOT NULL,
+    "IdDisciplina"  INTEGER NOT NULL,
 
-	PRIMARY KEY("Id" AUTOINCREMENT)
-	FOREIGN KEY("IdClasse")     REFERENCES "PED_CLASSES"("Id"),
-	FOREIGN KEY("IdDisciplina") REFERENCES "PED_DISCIPLINAS"("Id")
+    PRIMARY KEY ("IdClasse", "IdDisciplina"),
+
+    FOREIGN KEY("IdClasse")     REFERENCES "PED_CLASSES"("Id"),
+    FOREIGN KEY("IdDisciplina") REFERENCES "PED_DISCIPLINAS"("Id")
+)
+
+```
+
+### Relacionamento entre Disciplinas e professores
+
+*Uma classe tem vá*
+
+### Relacionamento entre Turma & Alunos
+
+*Uma turma tem vários alunos*
+
+```
+CREATE TABLE "PED_TURMA_ALUNOS" (
+	"IdTurma"	INTEGER NOT NULL,
+	"IdAluno"	INTEGER NOT NULL,
+	
+    PRIMARY KEY("IdTurma" "IdAluno"),
+	
+	FOREIGN KEY("IdAluno") REFERENCES "EXT_PESSOAS"("Id"),
+	FOREIGN KEY("IdTurma") REFERENCES "PED_TURMAS"("Id")
 )
 ```
 
-* 
+
+
+
 
 ## GRADE DE AULAS
