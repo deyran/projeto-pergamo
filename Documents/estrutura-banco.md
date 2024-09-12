@@ -58,27 +58,37 @@ CREATE TABLE "ADM_FUNCAO" (
 
 ### Classe e Turmas
 
-* Uma classe tem várias turmas
+1. Uma classe tem várias turmas
 
-* PED_CLASSES
+2. Classe
+
 ```
 CREATE TABLE "PED_CLASSES" (
-	"Id"	INTEGER,
+	"Id"		INTEGER,
 	"Descricao"	TEXT NOT NULL,
-	"Composicao"	TEXT NOT NULL,
+	"Etapa"		TEXT NOT NULL,
+
 	PRIMARY KEY("Id" AUTOINCREMENT)
 )
 ```
 
-* PED_TURMAS
+* **Etapas**
+
+Ensino infantil
+Anos iniciais
+Anos finais
+Ensino médio
+
+1. Turmas
 
 ```
 CREATE TABLE "PED_TURMAS" (
-	"Id"	INTEGER NOT NULL,
+	"Id"		INTEGER NOT NULL,
 	"IdClasse"	INTEGER,
-	"Turno"	INTEGER NOT NULL,
-	"Ano"	INTEGER NOT NULL,
+	"Turno"		INTEGER NOT NULL,
+	"Ano"		INTEGER NOT NULL,
 	"Descricao"	TEXT NOT NULL,
+	
 	PRIMARY KEY("Id" AUTOINCREMENT),
 	FOREIGN KEY("IdClasse") REFERENCES "PED_CLASSES"("Id")
 )
@@ -102,22 +112,24 @@ CREATE TABLE "PED_TURMA_ALUNOS" (
 )
 ```
 
-### Classe e Disciplinas
+### Classe | Disciplinas | Professores
 
 * Uma classe tem várias disciplinas
 
-* PED_DISCIPLINAS
+* Disciplinas
 
 ```
 CREATE TABLE "PED_DISCIPLINAS" (
-	"Id"	INTEGER NOT NULL,
-	"Descricao"	TEXT NOT NULL,
-	"DescAbrevado"	TEXT NOT NULL,
+	"Id"			INTEGER NOT NULL,
+	"Descricao"		TEXT NOT NULL,
+	"DescricaoAbv"	TEXT NOT NULL,
+	"Cor"			TEXT NOT NULL,
+
     PRIMARY KEY("Id" AUTOINCREMENT),
 )
 ```
 
-* PED_CLASS_DISC
+* Classe & Disciplina - Uma classe tem várias disciplinas
 
 ```
 CREATE TABLE "PED_CLASS_DISC" (
@@ -131,5 +143,6 @@ CREATE TABLE "PED_CLASS_DISC" (
 )
 ```
 
+* 
 
 ## GRADE DE AULAS
