@@ -107,8 +107,8 @@ CREATE TABLE "PED_DISCIPLINAS" (
 
 ### Relacionamento entre Classe & Disciplinas
 
-*Uma classe tem está para várias disciplinas*
-*Assim como uma disciplina está para várias classes*
+- *Uma classe tem está para várias disciplinas*
+- *Assim como uma disciplina está para várias classes*
 
 ```
 CREATE TABLE "PED_CLASS_DISC" (
