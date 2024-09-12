@@ -142,7 +142,8 @@ CREATE TABLE "PED_DISC_PROF" (
 
 ### Relacionamento entre Turma & Alunos
 
-*Uma turma tem vários alunos*
+- *Uma turma tem vários alunos*
+- *Um aluno pode estar em várias turmas*
 
 ```
 CREATE TABLE "PED_TURMA_ALUNOS" (
@@ -155,9 +156,5 @@ CREATE TABLE "PED_TURMA_ALUNOS" (
 	FOREIGN KEY("IdTurma") REFERENCES "PED_TURMAS"("Id")
 )
 ```
-
-
-
-
 
 ## GRADE DE AULAS
