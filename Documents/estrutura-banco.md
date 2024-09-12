@@ -70,10 +70,10 @@ CREATE TABLE "PED_CLASSES" (
 
 * **Etapas**
 
-Ensino infantil
-Anos iniciais
-Anos finais
-Ensino médio
+- Ensino infantil
+- Anos iniciais
+- Anos finais
+- Ensino médio
 
 ### Turma
 
