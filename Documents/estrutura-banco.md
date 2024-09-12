@@ -125,7 +125,20 @@ CREATE TABLE "PED_CLASS_DISC" (
 
 ### Relacionamento entre Disciplinas e professores
 
-*Uma classe tem vá*
+- *Uma disciplina está para vários professores*
+- *Um professor está para vários disciplinas*
+
+```
+CREATE TABLE "PED_DISC_PROF" (
+    "IdDisciplina"	INTEGER NOT NULL,
+    "IdProfessor"	INTEGER NOT NULL,	
+
+    PRIMARY KEY ("IdDisciplina", "IdProfessor"),
+
+    FOREIGN KEY("IdDisciplina") REFERENCES "PED_DISCIPLINAS"("Id")
+	FOREIGN KEY("IdProfessor")	REFERENCES "EXT_PESSOAS"("Id")
+)
+```
 
 ### Relacionamento entre Turma & Alunos
 
