@@ -1,8 +1,6 @@
 # ADMINISTRATIVO
 
-* Registro de pessoas que estão vinculadas a escola e os processos administrativos
-
-* ADM_EMPREGADOS - Pessoas da tabela EXT_PESSOAS que são empregados da escola
+Registro de processos administrativos
 
 ```
 CREATE TABLE "ADM_EMPREGADOS" (
