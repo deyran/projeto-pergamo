@@ -2,25 +2,34 @@
 
 ## REGISTRO EXTERNOS
 
-* Registros externos Representam todos os dodos obtidos fora da realidade da escola
+Registros externos - representam todos os dodos obtidos fora da realidade da escola
 
-* EXT_PESSOAS - Todas as pessoas, física ou jurídica, que estão vinculadas com a escola
+### Pessoas
+
+Representa todas as pessoas, física ou jurídica, que estão vinculadas com a escola
 
 ```
-CREATE TABLE "EXT_PESSOAS" (
+CREATE TABLE "EXT_PESSOAS" 
+(
 	"Id"	INTEGER NOT NULL,
 	"Nome"	TEXT NOT NULL,
+
 	PRIMARY KEY("Id" AUTOINCREMENT)
 )
 ```
 
-* EXT_PESS_VINC - Mapeamento que resgistro como as pessoas estão vinculadas
+### Vinculos
+
+1. Tabela destinada para registro de como as pessoas da tabela EXT_PESSOAS
+2. No caso de pessoa física mapea vínculos famíliares
 
 ```
-CREATE TABLE "EXT_PESS_VINC" (
+CREATE TABLE "EXT_PESS_VINC" 
+(
 	"IdPess1"	INTEGER,
 	"IdPess2"	INTEGER,
-	"Tipo"	INTEGER,
+	"Tipo"		INTEGER,
+
 	FOREIGN KEY("IdPess1") REFERENCES "EXT_PESSOAS"("Id"),
 	FOREIGN KEY("IdPess2") REFERENCES "EXT_PESSOAS"("Id"),
 	PRIMARY KEY("IdPessoa","IdAluno")
