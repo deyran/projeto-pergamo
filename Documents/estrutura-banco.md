@@ -111,9 +111,11 @@ CREATE TABLE "PED_DISCIPLINAS" (
 - *Assim como uma disciplina está para várias classes*
 
 ```
-CREATE TABLE "PED_CLASS_DISC" (
-    "IdClasse"      INTEGER NOT NULL,
-    "IdDisciplina"  INTEGER NOT NULL,
+CREATE TABLE "PED_CLASS_DISC" 
+(
+	"Id"			INTEGER,
+    "IdClasse"		INTEGER NOT NULL,
+    "IdDisciplina"	INTEGER NOT NULL,
 
     PRIMARY KEY ("IdClasse", "IdDisciplina"),
 
@@ -129,7 +131,9 @@ CREATE TABLE "PED_CLASS_DISC" (
 - *Um professor está para vários disciplinas*
 
 ```
-CREATE TABLE "PED_DISC_PROF" (
+CREATE TABLE "PED_DISC_PROF" 
+(
+    "Id"			INTEGER,
     "IdDisciplina"	INTEGER NOT NULL,
     "IdProfessor"	INTEGER NOT NULL,	
 
@@ -146,7 +150,9 @@ CREATE TABLE "PED_DISC_PROF" (
 - *Um aluno pode estar em várias turmas*
 
 ```
-CREATE TABLE "PED_TURMA_ALUNOS" (
+CREATE TABLE "PED_TURMA_ALUNOS" 
+(
+	"Id"		INTEGER,
 	"IdTurma"	INTEGER NOT NULL,
 	"IdAluno"	INTEGER NOT NULL,
 	
