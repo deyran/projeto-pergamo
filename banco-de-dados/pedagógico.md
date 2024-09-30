@@ -29,5 +29,26 @@ INSERT INTO PED_CLASSES_ETAPA ("Descricao") VALUES ('Ensino infantil');
 INSERT INTO PED_CLASSES_ETAPA ("Descricao") VALUES ('Anos iniciais');
 INSERT INTO PED_CLASSES_ETAPA ("Descricao") VALUES ('Anos finais');
 INSERT INTO PED_CLASSES_ETAPA ("Descricao") VALUES ('Ensino médio');
+```
+
+## Turma
+
+*Uma classe tem várias turmas*
 
 ```
+CREATE TABLE "PED_TURMAS" (
+	"Id"		INTEGER NOT NULL,
+	"IdClasse"	INTEGER,
+	"Turno"		INTEGER NOT NULL,
+	"Ano"		INTEGER NOT NULL,
+	"Descricao"	TEXT NOT NULL,
+
+	PRIMARY KEY("Id" AUTOINCREMENT),
+	FOREIGN KEY("IdClasse") REFERENCES "PED_CLASSES"("Id")
+)
+```
+
+* Turno
+0 - Manhã
+1 - Vespertino
+2 - Noturno
