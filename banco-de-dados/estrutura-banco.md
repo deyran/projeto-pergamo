@@ -93,15 +93,7 @@ CREATE TABLE "ADM_FUNCAO" (
 
 ### Classe
 
-```
-CREATE TABLE "PED_CLASSES" (
-	"Id"		INTEGER,
-	"Descricao"	TEXT NOT NULL,
-	"Etapa"		TEXT NOT NULL,
 
-	PRIMARY KEY("Id" AUTOINCREMENT)
-)
-```
 
 #### Etapas
 
