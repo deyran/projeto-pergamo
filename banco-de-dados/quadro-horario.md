@@ -20,9 +20,13 @@
 
 5. Cadastro de horários
 
+- *Turno*: Manhã; Vespertino; Noturno
 - *Dia da semana*: Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado
-- *Turma* (esquema pedagógico): Id, Turno, Ano
 - *Horário*: hora inicial (07:00), hora final (07:45)
 
-6. Relação Horário e disponibilidade do professor
-7. Quadro de horário
+* Um horário pode contemplar várias turmas
+  
+- *Turma* (esquema pedagógico): Id, Turno, Ano
+
+1. Relação Horário e disponibilidade do professor
+2. Quadro de horário
