@@ -4,7 +4,7 @@ Registros externos - representam todos os dodos obtidos fora da realidade da esc
 
 ## Pessoas
 
-Representa todas as pessoas, física ou jurídica, que estão vinculadas com a escola
+Representa todas as pessoas física que estão vinculadas com a escola
 
 ```
 CREATE TABLE "EXT_PESSOAS" 
@@ -49,12 +49,10 @@ CREATE TABLE "EXT_PESS_VINC_TIPO"
 	PRIMARY KEY("Id" AUTOINCREMENT)
 )
 
-INSERT INTO EXT_PESS_VINC_TIPO (Descricao) VALUES ('Casado');
 INSERT INTO EXT_PESS_VINC_TIPO (Descricao) VALUES ('Pai');
 INSERT INTO EXT_PESS_VINC_TIPO (Descricao) VALUES ('Mãe');
 INSERT INTO EXT_PESS_VINC_TIPO (Descricao) VALUES ('Tio(a)');
 INSERT INTO EXT_PESS_VINC_TIPO (Descricao) VALUES ('Avô(ó)');
-INSERT INTO EXT_PESS_VINC_TIPO (Descricao) VALUES ('Irmãos');
 INSERT INTO EXT_PESS_VINC_TIPO (Descricao) VALUES ('Padrasto');
 INSERT INTO EXT_PESS_VINC_TIPO (Descricao) VALUES ('Madrasta');
 INSERT INTO EXT_PESS_VINC_TIPO (Descricao) VALUES ('Outro');

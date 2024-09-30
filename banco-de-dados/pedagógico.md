@@ -48,7 +48,79 @@ CREATE TABLE "PED_TURMAS" (
 )
 ```
 
-* Turno
+* *Turno*
 0 - Manhã
 1 - Vespertino
 2 - Noturno
+
+### Relacionamento entre Turma & Alunos
+
+- *Uma turma tem vários alunos*
+- *Um aluno pode estar em várias turmas*
+
+```
+CREATE TABLE "PED_TURMA_ALUNOS" 
+(
+	"Id"		INTEGER,
+	"IdTurma"	INTEGER NOT NULL,
+	"IdAluno"	INTEGER NOT NULL,
+	
+    PRIMARY KEY("IdTurma" "IdAluno"),
+	
+	FOREIGN KEY("IdAluno") REFERENCES "EXT_PESSOAS"("Id"),
+	FOREIGN KEY("IdTurma") REFERENCES "PED_TURMAS"("Id")
+)
+```
+
+## Disciplina
+
+```
+CREATE TABLE "PED_DISCIPLINAS" (
+	"Id"			INTEGER NOT NULL,
+	"Descricao"		TEXT NOT NULL,
+	"DescricaoAbv"	TEXT NOT NULL,
+	"Cor"			TEXT NOT NULL,
+
+    PRIMARY KEY("Id" AUTOINCREMENT),
+)
+```
+
+### Relacionamento entre Classe & Disciplinas
+
+- *Uma classe tem está para várias disciplinas*
+- *Assim como uma disciplina está para várias classes*
+
+```
+CREATE TABLE "PED_CLASS_DISC" 
+(
+	"Id"			INTEGER,
+    "IdClasse"		INTEGER NOT NULL,
+    "IdDisciplina"	INTEGER NOT NULL,
+
+    PRIMARY KEY ("IdClasse", "IdDisciplina"),
+
+    FOREIGN KEY("IdClasse")     REFERENCES "PED_CLASSES"("Id"),
+    FOREIGN KEY("IdDisciplina") REFERENCES "PED_DISCIPLINAS"("Id")
+)
+
+```
+
+### Relacionamento entre Disciplinas e professores
+
+- *Uma disciplina está para vários professores*
+- *Um professor está para vários disciplinas*
+
+```
+CREATE TABLE "PED_DISC_PROF" 
+(
+    "Id"			INTEGER,
+    "IdDisciplina"	INTEGER NOT NULL,
+    "IdProfessor"	INTEGER NOT NULL,	
+
+    PRIMARY KEY ("IdDisciplina", "IdProfessor"),
+
+    FOREIGN KEY("IdDisciplina") REFERENCES "PED_DISCIPLINAS"("Id")
+	FOREIGN KEY("IdProfessor")	REFERENCES "EXT_PESSOAS"("Id")
+)
+```
+  
