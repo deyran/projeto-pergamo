@@ -20,13 +20,21 @@ Já contemplado no esquema **pedagógico**
 
 *Uma turma tem vários horários*
 
+GRD_Horario
 Id  |IdTurma    |Inicio |Fim
-|0  |0          |07:00  |08:00 
-|1  |0          |08:00  |09:00
-|2  |0          |09:00  |09:20
-|3  |0          |09:20  |10:20
-|4  |0          |10:20  |11:20
+0   |0          |07:00  |08:00 
+1   |0          |08:00  |09:00
+2   |0          |09:00  |09:20
+3   |0          |09:20  |10:20
+4   |0          |10:20  |11:20
 
+GRD_HorarioSemana
+Id  |IdHorario  |Semana
+0   |0          |1
+0   |0          |2
+0   |0          |3
+0   |0          |4
+0   |0          |5
 
 - *Turno*: Manhã (0); Vespertino (1); Noturno (2)
 - *Dia da semana*: Domingo (0), Segunda (1), Terça (2), Quarta (3), Quinta (4), Sexta (5), Sábado (6)
