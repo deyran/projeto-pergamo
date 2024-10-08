@@ -36,13 +36,14 @@ INSERT INTO PED_CLASSES_ETAPA ("Descricao") VALUES ('Ensino médio');
 *Uma classe tem várias turmas*
 
 ```
-CREATE TABLE "PED_TURMAS" (
+CREATE TABLE "PED_TURMAS" 
+(
 	"Id"		INTEGER NOT NULL,
 	"IdClasse"	INTEGER,
 	"Turno"		INTEGER NOT NULL,
 	"Ano"		INTEGER NOT NULL,
 	"Descricao"	TEXT NOT NULL,
-
+	
 	PRIMARY KEY("Id" AUTOINCREMENT),
 	FOREIGN KEY("IdClasse") REFERENCES "PED_CLASSES"("Id")
 )
