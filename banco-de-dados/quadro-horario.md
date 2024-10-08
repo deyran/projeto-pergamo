@@ -36,6 +36,17 @@ Id  |IdHorario  |Semana
 3   |0          |4 (Quinta)
 4   |0          |5 (Sexta)
 
+GRD_Semana
+Id  |Descricao      |DescAbv
+0   |Domingo        |Domingo
+1   |Segunda-feira  |Segunda
+2   |Terça-feira    |Terça
+3   |Quarta-feira   |Quarta
+4   |Quinta-feira   |Quinta
+5   |Sexta-feira    |Sexta
+6   |Sábado         |Sábado
+
+
 - *Turno*: Manhã (0); Vespertino (1); Noturno (2)
 - *Dia da semana*: Domingo (0), Segunda (1), Terça (2), Quarta (3), Quinta (4), Sexta (5), Sábado (6)
 - *Horário*: hora inicial (07:00), hora final (07:45)
