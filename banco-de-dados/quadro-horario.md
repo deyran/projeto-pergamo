@@ -1,24 +1,22 @@
 # Grade Horário
 
-## Requisitos
+## Cadastro de unidade
 
-1. Cadastro de unidade
+*Não contemplado nesta fase*
 
-- *Não contemplado nesta fase*
-
-2. Cadastro das disciplinas
+## Cadastro das disciplinas
    
-- Já contemplado no esquema **pedagógico**
+Já contemplado no esquema **pedagógico**
    
-3. Relação professor e disciplina
+## Relação professor e disciplina
 
-- Já contemplado no esquema **pedagógico**
+Já contemplado no esquema **pedagógico**
    
-4. Cadastro da grade currícular das turmas
+## Cadastro da grade currícular das turmas
 
-- Já contemplado no esquema **pedagógico**
+Já contemplado no esquema **pedagógico**
 
-5. Cadastro de horários
+## Cadastro de horários
 
 - *Turno*: Manhã; Vespertino; Noturno
 - *Dia da semana*: Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado
