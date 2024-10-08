@@ -31,17 +31,18 @@ Id  |IdTurma    |Inicio |Fim    |Tipo
 *O mesmo horário se repete me vários dias da semana*
 
 GRD_HorarioSemana
-Id  |IdHorario  |Semana
-0   |0          |1 (Segunda)
-1   |0          |2 (Terça)
-2   |0          |3 (Quarta)
-3   |0          |4 (Quinta)
-4   |0          |5 (Sexta)
-5   |1          |1 (Segunda)
-6   |1          |2 (Terça)
-7   |1          |3 (Quarta)
-8   |1          |4 (Quinta)
-9   |1          |5 (Sexta)
+Id  |IdHorario      |Semana
+0   |0 (07:00-08:00)|1 (Segunda)
+1   |0 (07:00-08:00)|2 (Terça)
+2   |0 (07:00-08:00)|3 (Quarta)
+3   |0 (07:00-08:00)|4 (Quinta)
+4   |0 (07:00-08:00)|5 (Sexta)
+
+5   |1 (08:00-09:00)|1 (Segunda)
+6   |1 (08:00-09:00)|2 (Terça)
+7   |1 (08:00-09:00)|3 (Quarta)
+8   |1 (08:00-09:00)|4 (Quinta)
+9   |1 (08:00-09:00)|5 (Sexta)
 
 GRD_Semana
 Id  |Descricao      |DescAbv
@@ -53,14 +54,14 @@ Id  |Descricao      |DescAbv
 5   |Sexta-feira    |Sexta
 6   |Sábado         |Sábado
 
+## Gestão de horário disponibilizado pelo professor
 
-- *Turno*: Manhã (0); Vespertino (1); Noturno (2)
-- *Dia da semana*: Domingo (0), Segunda (1), Terça (2), Quarta (3), Quinta (4), Sexta (5), Sábado (6)
-- *Horário*: hora inicial (07:00), hora final (07:45)
+GRD_Horario |Disponibilidade
+IdHSem      |idProfessor
+0           |0
 
-* Um horário pode contemplar várias turmas
-  
-- *Turma* (esquema pedagógico): Id, Turno, Ano
+## Gestão de horário, Turma, Disciplina e Professor
 
-1. Relação Horário e disponibilidade do professor
-2. Quadro de horário
+GRD_HorarioDisciplina
+IdHSem  |idDisciplina   |idProfessor
+0       |0              |0
