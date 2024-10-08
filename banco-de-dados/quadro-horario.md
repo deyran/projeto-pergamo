@@ -16,7 +16,7 @@ Já contemplado no esquema **pedagógico**
 
 Já contemplado no esquema **pedagógico**
 
-## Horário escolar
+## Gestão de horário das turmas
 
 *Uma turma tem vários horários*
 
@@ -27,6 +27,8 @@ Id  |IdTurma    |Inicio |Fim    |Tipo
 2   |0          |09:00  |09:20  |0 (Intervalo)
 3   |0          |09:20  |10:20  |0 (Aula)
 4   |0          |10:20  |11:20  |0 (Aula)
+
+O mesmo horário se repete me vários dias da semana
 
 GRD_HorarioSemana
 Id  |IdHorario  |Semana
