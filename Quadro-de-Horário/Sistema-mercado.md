@@ -14,11 +14,13 @@
 - Espaço físico
 - Cor
 
-3. Cadastro de tempo de duração para cada disciplina
+3. Padrão de duração durações das aulas
    
-4. Cadastro das Séries e Disciplinas
-5. Cadastro das Turma e Horário de aulas
-6. Cadastro Professores/Disciplinas e Disponibilidade de horário
+4. Cadastro das Séries e disciplinas vinculadas
+   
+5. Cadastro de Vinculos de Turmas a Séries
+   
+6. Cadastrar os horários de cada dia da semana das turmas baseado no padrão de duração de aulas
 
 Fonte: [V1](https://www.youtube.com/watch?v=wCWiExXOW2o)
 
